@@ -1,5 +1,4 @@
 import pandas as pd
-from pandas import ExcelWriter
 import numpy as np
 from sklearn.decomposition import PCA
 import matplotlib.pyplot as plt
