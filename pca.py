@@ -45,10 +45,10 @@ if uploaded_file is not None:
     per_variance_ratio = np.round(explained* 100, decimals=1)
     number_of_pc_plotted = min(len(per_variance_ratio), max_pc_plotted)
     per_variance_ratio = per_variance_ratio[0:number_of_pc_plotted]
-    labels = ['第' + str(x) + '主成分' for x in range(1, number_of_pc_plotted+1)]
+    labels = ['Principal Component' + str(x) for x in range(1, number_of_pc_plotted+1)]
     plt.bar(x=range(1,number_of_pc_plotted+1), height=per_variance_ratio, tick_label=labels)
-    plt.ylabel('方差比例（%）')
-    plt.xlabel('主成分')
-    plt.title('方差比例碎石图')
+    plt.ylabel('Variance Proportion(%)')
+    plt.xlabel('Principal Components')
+    plt.title('Scree Plot')
     st.pyplot(plt)
 
